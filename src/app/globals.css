@@ -4,20 +4,20 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #0f172a;
-    --border: #e2e8f0;
-    --input: #f1f5f9;
-    --ring: #10b981;
+    --background: #F3F2EF; /* LinkedIn Feed Soft Gray */
+    --foreground: #1D2226; /* LinkedIn Dark Slate Text */
+    --border: #E0E0E0; /* Light gray line border */
+    --input: #FFFFFF;
+    --ring: #0A66C2; /* LinkedIn Signature Blue */
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: #080b11;
-    --foreground: #f8fafc;
-    --border: #1e293b;
-    --input: #0f172a;
-    --ring: #10b981;
+    --background: #090E17; /* Deep Navy Slate Background */
+    --foreground: #F8FAFC; /* Clean Off-White Text */
+    --border: #1E293B; /* Dark slate borders */
+    --input: #0B0F19;
+    --ring: #0A66C2; /* LinkedIn Signature Blue */
   }
 }
 
@@ -37,40 +37,38 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.2);
+  background: rgba(10, 102, 194, 0.2); /* LinkedIn Blue Scrollbar */
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.4);
+  background: rgba(10, 102, 194, 0.4);
 }
 
-/* Glassmorphism Utilities */
+/* Responsive UI Panels */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .dark .glass-panel {
-  background: rgba(15, 23, 42, 0.4);
+  background: rgba(11, 15, 25, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .dark .glass-card {
-  background: linear-gradient(135deg, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(11, 15, 25, 0.8) 0%, rgba(11, 15, 25, 0.4) 100%);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Ambient glow blobs */
