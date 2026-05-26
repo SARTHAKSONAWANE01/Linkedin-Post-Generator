@@ -99,7 +99,7 @@ Huge congrats to our game-changing wizards! Join our journey as we revolutionize
     forge: {
       title: "Forge Authentic Engine",
       badge: "Thought Leader Grade",
-      bg: "border-emerald-500/30 bg-emerald-950/5",
+      bg: "border-blue-500/30 bg-blue-950/5",
       content: `We spent the last 4 days refactoring our database caching. 
 
 The exact metrics:
@@ -114,40 +114,40 @@ Are you query-auditing weekly, or only when things crawl?`,
   };
 
   return (
-    <div className="space-y-32 py-10 overflow-hidden relative">
+    <div className="space-y-24 py-6 overflow-hidden relative">
       {/* Background glow animations */}
-      <div className="glow-blob w-[500px] h-[500px] bg-blue-500/10 top-[-100px] right-[-100px]" />
-      <div className="glow-blob w-[600px] h-[600px] bg-indigo-500/5 bottom-[200px] left-[-200px]" />
+      <div className="glow-blob w-[500px] h-[500px] bg-[#0A66C2]/5 top-[-100px] right-[-100px]" />
+      <div className="glow-blob w-[600px] h-[600px] bg-blue-500/5 bottom-[200px] left-[-200px]" />
 
       {/* --- HERO SECTION --- */}
-      <section className="relative text-center max-w-4xl mx-auto space-y-8 pt-10 md:pt-16">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/20 border border-blue-500/20 text-blue-500 text-xs font-semibold hover:border-blue-500/40 transition">
+      <section className="relative text-center max-w-4xl mx-auto space-y-6 pt-8 md:pt-12">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/20 border border-blue-500/20 text-[#0A66C2] dark:text-blue-400 text-xs font-semibold hover:border-blue-500/40 transition shadow-sm">
           <Sparkles className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '6s' }} />
           <span>Forge 1.0 Release Beta is Live</span>
         </div>
         
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] md:leading-none">
+        <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-[1.1] md:leading-none text-slate-900 dark:text-slate-100">
           Turn Your Real Experiences Into <br />
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-400 to-blue-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-600 bg-clip-text text-transparent">
             Authentic LinkedIn Content
           </span>
         </h1>
 
-        <p className="text-base md:text-xl text-slate-400 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          Zero AI slop. Zero corporate cringe. We help engineers, founders, and researchers transform rough notes, code commits, and project specs into human-sounding thought leadership.
+        <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
+          Convert raw logs and dev updates into human-sounding technical thought leadership. Zero slop. Zero corporate cringe.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
           <Link 
             href="/generator" 
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-base shadow-lg shadow-blue-500/20 hover:scale-105 active:scale-95 transition flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#0A66C2] hover:bg-[#004182] text-white font-bold text-sm shadow-md hover:scale-[1.02] active:scale-95 smooth-transition flex items-center justify-center gap-2"
           >
             Start Crafting Free
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
           <a 
             href="#demo" 
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-300 font-semibold text-base border border-slate-200/10 hover:border-slate-500/30 transition flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-805 text-slate-700 dark:text-slate-300 font-semibold text-sm border border-slate-200 dark:border-slate-800 smooth-transition shadow-sm flex items-center justify-center gap-2"
           >
             See Live Demo
           </a>
@@ -155,9 +155,9 @@ Are you query-auditing weekly, or only when things crawl?`,
       </section>
 
       {/* --- HERO INTERACTIVE MOCKUP DEMO --- */}
-      <section id="demo" className="max-w-5xl mx-auto scroll-mt-24">
-        <div className="glass-card rounded-3xl border border-slate-200/10 dark:border-slate-800/80 p-5 md:p-8 relative">
-          <div className="absolute -top-3 left-10 px-4 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-[10px] uppercase tracking-wider font-extrabold text-white">
+      <section id="demo" className="max-w-5xl mx-auto scroll-mt-24 px-4 sm:px-6">
+        <div className="glass-card rounded-3xl p-5 md:p-8 relative">
+          <div className="absolute -top-3 left-10 px-4 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-[10px] uppercase tracking-wider font-extrabold text-white shadow-sm">
             Interactive Playground
           </div>
 
@@ -171,7 +171,7 @@ Are you query-auditing weekly, or only when things crawl?`,
                 <textarea
                   value={demoInput}
                   onChange={(e) => setDemoInput(e.target.value)}
-                  className="w-full h-36 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800/80 focus:border-blue-500/50 outline-none text-sm leading-relaxed text-slate-800 dark:text-slate-300 smooth-transition resize-none"
+                  className="w-full h-36 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800/80 focus:border-blue-500/50 outline-none text-xs leading-relaxed text-slate-900 dark:text-slate-300 smooth-transition resize-none"
                   placeholder="Paste rough bullet points, git commits, or launch features here..."
                 />
               </div>
@@ -188,8 +188,8 @@ Are you query-auditing weekly, or only when things crawl?`,
                       className={`
                         py-3 px-2 rounded-xl text-xs font-bold border transition-all duration-200
                         ${demoTone === tone
-                          ? "bg-blue-500/15 border-blue-500 text-blue-500 shadow-sm"
-                          : "bg-transparent border-slate-200 dark:border-slate-800 text-slate-400 hover:border-slate-500/40 hover:text-slate-200"
+                          ? "bg-blue-500/10 border-blue-500 text-[#0A66C2] dark:text-blue-400 font-bold"
+                          : "bg-transparent border-slate-200 dark:border-slate-800 text-slate-500 hover:border-slate-500/40 hover:text-slate-900 dark:hover:text-slate-200"
                         }
                       `}
                     >
@@ -207,10 +207,10 @@ Are you query-auditing weekly, or only when things crawl?`,
               </span>
               
               {/* LinkedIn Post Mock Render */}
-              <div className="flex-1 rounded-2xl bg-white dark:bg-[#111622] border border-slate-200 dark:border-slate-800 p-5 shadow-inner flex flex-col justify-between">
+              <div className="flex-1 rounded-2xl bg-white dark:bg-[#111622] border border-slate-200 dark:border-slate-800 p-5 shadow-sm flex flex-col justify-between">
                 {/* LinkedIn header */}
                 <div className="flex items-center gap-3 pb-4 border-b border-slate-100 dark:border-slate-800/40">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center font-bold text-blue-500 border border-blue-500/20">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center font-bold text-blue-600 dark:text-blue-400 border border-blue-500/15">
                     PF
                   </div>
                   <div>
@@ -220,7 +220,7 @@ Are you query-auditing weekly, or only when things crawl?`,
                     <span className="block text-[10px] text-slate-500 dark:text-slate-400 truncate max-w-[200px]">
                       Lead Software Architect & Founder
                     </span>
-                    <span className="block text-[8px] text-slate-400">Just now • Edited</span>
+                    <span className="block text-[8px] text-slate-400 font-medium">Just now • Edited</span>
                   </div>
                 </div>
 
@@ -254,13 +254,13 @@ Are you query-auditing weekly, or only when things crawl?`,
       </section>
 
       {/* --- THE COMPARISON SHOWDOWN --- */}
-      <section className="max-w-5xl mx-auto space-y-12">
+      <section className="max-w-5xl mx-auto space-y-12 px-4 sm:px-6">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-5xl font-black">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-slate-100">
             The Battle Against "AI Slop"
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto text-sm md:text-base">
-            Why current marketing templates are failing your professional branding, and how we write content that build true technical authority.
+          <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto text-xs md:text-sm">
+            Why current marketing templates are failing your professional branding, and how we write content that builds true technical authority.
           </p>
         </div>
 
@@ -271,8 +271,8 @@ Are you query-auditing weekly, or only when things crawl?`,
               <AlertCircle className="w-3 h-3" />
               {problemComparison.slop.badge}
             </div>
-            <h3 className="text-xl font-bold text-red-400">{problemComparison.slop.title}</h3>
-            <p className="text-xs text-slate-400 dark:text-slate-500 leading-relaxed font-mono whitespace-pre-wrap bg-slate-950/20 p-4 rounded-xl border border-slate-200/5">
+            <h3 className="text-lg font-bold text-red-400">{problemComparison.slop.title}</h3>
+            <p className="text-xs text-slate-500 dark:text-slate-500 leading-relaxed font-mono whitespace-pre-wrap bg-slate-950/20 p-4 rounded-xl border border-slate-200/5">
               {problemComparison.slop.content}
             </p>
           </div>
@@ -283,7 +283,7 @@ Are you query-auditing weekly, or only when things crawl?`,
               <CheckCircle2 className="w-3 h-3 animate-bounce" />
               {problemComparison.forge.badge}
             </div>
-            <h3 className="text-xl font-bold text-blue-500">{problemComparison.forge.title}</h3>
+            <h3 className="text-lg font-bold text-blue-500">{problemComparison.forge.title}</h3>
             <p className="text-xs text-slate-800 dark:text-slate-300 leading-relaxed font-sans whitespace-pre-wrap bg-slate-950/40 p-4 rounded-xl border border-blue-500/10">
               {problemComparison.forge.content}
             </p>
@@ -292,12 +292,12 @@ Are you query-auditing weekly, or only when things crawl?`,
       </section>
 
       {/* --- FEATURES GRID --- */}
-      <section className="max-w-6xl mx-auto space-y-16">
+      <section className="max-w-6xl mx-auto space-y-16 px-4 sm:px-6">
         <div className="text-center space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0A66C2] bg-blue-500/10 px-3 py-1 rounded-full">
             Core Utilities
           </span>
-          <h2 className="text-3xl md:text-5xl font-black">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-slate-100">
             Crafted Specifically for Deep Thinkers
           </h2>
         </div>
@@ -344,8 +344,8 @@ Are you query-auditing weekly, or only when things crawl?`,
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white shadow-md">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-100">{feat.title}</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">{feat.desc}</p>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">{feat.title}</h3>
+                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{feat.desc}</p>
               </div>
             );
           })}
@@ -353,10 +353,10 @@ Are you query-auditing weekly, or only when things crawl?`,
       </section>
 
       {/* --- WORKFLOW VISUALIZATION --- */}
-      <section className="max-w-4xl mx-auto space-y-16">
+      <section className="max-w-4xl mx-auto space-y-16 px-4 sm:px-6">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-5xl font-black">How Forge Works</h2>
-          <p className="text-slate-400 text-sm md:text-base">Three steps to elevate your LinkedIn presence from standard templates to thought leadership.</p>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-slate-100">How Forge Works</h2>
+          <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Three steps to elevate your LinkedIn presence from standard templates to thought leadership.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -365,13 +365,13 @@ Are you query-auditing weekly, or only when things crawl?`,
               step: "01",
               title: "Brain Dump",
               desc: "Paste rough ideas, bullet summaries, GitHub release notes, or raw experiences into the generator.",
-              color: "border-slate-800"
+              color: "border-slate-200 dark:border-slate-800"
             },
             {
               step: "02",
               title: "Humanizer Processing",
               desc: "Our engine maps your tone settings, filters out AI cliches, and generates natural reading rhythms.",
-              color: "border-slate-800"
+              color: "border-slate-200 dark:border-slate-800"
             },
             {
               step: "03",
@@ -380,20 +380,20 @@ Are you query-auditing weekly, or only when things crawl?`,
               color: "border-blue-500/40 bg-blue-950/5"
             }
           ].map((item, idx) => (
-            <div key={idx} className={`p-6 rounded-2xl border ${item.color} space-y-4 relative`}>
+            <div key={idx} className={`p-6 rounded-2xl border ${item.color} space-y-4 relative shadow-sm`}>
               <div className="text-4xl font-extrabold text-blue-500/20">{item.step}</div>
-              <h3 className="text-lg font-bold text-slate-100">{item.title}</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">{item.title}</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* --- TESTIMONIALS --- */}
-      <section className="max-w-5xl mx-auto space-y-16">
+      <section className="max-w-5xl mx-auto space-y-16 px-4 sm:px-6">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-5xl font-black">Trusted by Technical Minds</h2>
-          <p className="text-slate-400 text-sm md:text-base">Here is what developers, founders, and consultants are saying about our authentic engine.</p>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-slate-100">Trusted by Technical Minds</h2>
+          <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm">Here is what developers, founders, and consultants are saying about our authentic engine.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -417,15 +417,15 @@ Are you query-auditing weekly, or only when things crawl?`,
               avatar: "MV"
             }
           ].map((test, idx) => (
-            <div key={idx} className="glass-card rounded-2xl p-6 border border-slate-200/5 space-y-4 flex flex-col justify-between">
-              <p className="text-xs italic text-slate-300 leading-relaxed">"{test.quote}"</p>
-              <div className="flex items-center gap-3 pt-4 border-t border-slate-200/5">
-                <div className="w-8 h-8 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-xs font-bold">
+            <div key={idx} className="glass-card rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+              <p className="text-xs italic text-slate-600 dark:text-slate-300 leading-relaxed">"{test.quote}"</p>
+              <div className="flex items-center gap-3 pt-4 border-t border-slate-200">
+                <div className="w-8 h-8 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold border border-blue-500/15">
                   {test.avatar}
                 </div>
                 <div>
-                  <span className="block text-xs font-bold text-slate-200">{test.author}</span>
-                  <span className="block text-[9px] text-slate-500">{test.role}</span>
+                  <span className="block text-xs font-bold text-slate-900 dark:text-slate-200">{test.author}</span>
+                  <span className="block text-[9px] text-slate-500 dark:text-slate-400">{test.role}</span>
                 </div>
               </div>
             </div>
@@ -434,23 +434,23 @@ Are you query-auditing weekly, or only when things crawl?`,
       </section>
 
       {/* --- PRICING SECTION --- */}
-      <section className="max-w-4xl mx-auto space-y-16">
+      <section className="max-w-4xl mx-auto space-y-16 px-4 sm:px-6">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-5xl font-black">Simple, Premium Pricing</h2>
-          <p className="text-slate-400 text-sm md:text-base">No credit card required. Upgrade when you need massive volume.</p>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-slate-100">Simple, Premium Pricing</h2>
+          <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm">No credit card required. Upgrade when you need massive volume.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
           {/* Free Tier */}
-          <div className="p-8 rounded-3xl border border-slate-200/5 bg-slate-900/10 space-y-6 flex flex-col justify-between">
+          <div className="p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900/10 space-y-6 flex flex-col justify-between shadow-sm">
             <div className="space-y-2">
               <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Hobby</span>
-              <h3 className="text-2xl font-bold">Developer Free</h3>
-              <p className="text-slate-400 text-xs">For side-projects, indie developers, and student leaders.</p>
-              <div className="text-3xl font-extrabold pt-2">$0 <span className="text-sm font-normal text-slate-500">/ forever</span></div>
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Developer Free</h3>
+              <p className="text-slate-500 dark:text-slate-400 text-xs">For side-projects, indie developers, and student leaders.</p>
+              <div className="text-3xl font-extrabold pt-2 text-slate-900 dark:text-slate-100">$0 <span className="text-sm font-normal text-slate-500">/ forever</span></div>
             </div>
 
-            <ul className="space-y-3 text-xs text-slate-300 border-t border-slate-200/5 pt-4">
+            <ul className="space-y-3 text-xs text-slate-600 dark:text-slate-350 border-t border-slate-200 dark:border-slate-800/80 pt-4">
               <li className="flex items-center gap-2">✔ 15 LinkedIn Generations / mo</li>
               <li className="flex items-center gap-2">✔ 1 Active Brand Profile Memory</li>
               <li className="flex items-center gap-2">✔ 3 Custom Tone Settings</li>
@@ -459,26 +459,26 @@ Are you query-auditing weekly, or only when things crawl?`,
 
             <Link 
               href="/generator" 
-              className="block w-full py-3 text-center rounded-xl bg-white/5 border border-slate-200/10 text-slate-300 text-xs font-semibold hover:bg-white/10 transition"
+              className="block w-full py-3 text-center rounded-xl bg-slate-50 hover:bg-slate-100 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold transition"
             >
               Get Started Free
             </Link>
           </div>
 
           {/* Pro Tier */}
-          <div className="p-8 rounded-3xl border border-blue-500/30 bg-blue-950/5 space-y-6 relative flex flex-col justify-between">
-            <div className="absolute top-4 right-4 bg-blue-500 text-white text-[9px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full">
+          <div className="p-8 rounded-3xl border border-blue-500/30 bg-blue-50/20 dark:bg-blue-950/5 space-y-6 relative flex flex-col justify-between shadow-sm">
+            <div className="absolute top-4 right-4 bg-blue-500 text-white text-[9px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full shadow-sm">
               Popular
             </div>
             
             <div className="space-y-2">
               <span className="text-xs font-bold text-blue-500 uppercase tracking-wider">Professional</span>
-              <h3 className="text-2xl font-bold">Forge Pro</h3>
-              <p className="text-slate-400 text-xs">For founders, research heads, and full-time technical creators.</p>
-              <div className="text-3xl font-extrabold pt-2">$29 <span className="text-sm font-normal text-slate-500">/ month</span></div>
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Forge Pro</h3>
+              <p className="text-slate-500 dark:text-slate-400 text-xs">For founders, research heads, and full-time technical creators.</p>
+              <div className="text-3xl font-extrabold pt-2 text-slate-900 dark:text-slate-100">$29 <span className="text-sm font-normal text-slate-500">/ month</span></div>
             </div>
 
-            <ul className="space-y-3 text-xs text-slate-300 border-t border-blue-500/15 pt-4">
+            <ul className="space-y-3 text-xs text-slate-600 dark:text-slate-300 border-t border-blue-500/20 pt-4">
               <li className="flex items-center gap-2">✔ Unlimited Custom Post Generations</li>
               <li className="flex items-center gap-2">✔ Infinite Custom Brand Profiles</li>
               <li className="flex items-center gap-2">✔ Full GitHub Repository Import</li>
@@ -488,7 +488,7 @@ Are you query-auditing weekly, or only when things crawl?`,
 
             <Link 
               href="/generator" 
-              className="block w-full py-3 text-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs font-bold shadow-lg shadow-blue-500/20 hover:scale-[1.02] transition"
+              className="block w-full py-3 text-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs font-bold shadow-md shadow-blue-500/20 hover:scale-[1.02] transition"
             >
               Upgrade to Pro
             </Link>
@@ -497,8 +497,8 @@ Are you query-auditing weekly, or only when things crawl?`,
       </section>
 
       {/* --- FAQ SECTION --- */}
-      <section className="max-w-3xl mx-auto space-y-12">
-        <h2 className="text-3xl font-black text-center">Frequently Asked Questions</h2>
+      <section className="max-w-3xl mx-auto space-y-12 px-4 sm:px-6">
+        <h2 className="text-3xl font-black text-center text-slate-900 dark:text-slate-100">Frequently Asked Questions</h2>
         
         <div className="space-y-4">
           {[
@@ -515,16 +515,16 @@ Are you query-auditing weekly, or only when things crawl?`,
               a: "You save your background parameters (achievements, code constraints, vocabulary bounds, favorite topics). During generation, we build structural prompts combining your notes with your saved memory context, ensuring your final post sound exactly like you."
             }
           ].map((faq, idx) => (
-            <div key={idx} className="p-6 rounded-2xl bg-slate-900/10 border border-slate-200/5 space-y-2">
-              <h3 className="font-bold text-slate-200 text-sm md:text-base">{faq.q}</h3>
-              <p className="text-xs md:text-sm text-slate-400 leading-relaxed">{faq.a}</p>
+            <div key={idx} className="p-6 rounded-2xl bg-white dark:bg-slate-900/10 border border-slate-200 dark:border-slate-800/80 space-y-2 shadow-sm">
+              <h3 className="font-bold text-slate-900 dark:text-slate-200 text-sm md:text-base">{faq.q}</h3>
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{faq.a}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* --- CORPORATE FOOTER --- */}
-      <footer className="pt-16 pb-8 border-t border-slate-200 dark:border-slate-850 space-y-12">
+      <footer className="pt-16 pb-8 border-t border-slate-200 dark:border-slate-800 space-y-12 px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
           {/* Brand Info */}
           <div className="space-y-4 md:col-span-1">
@@ -536,27 +536,27 @@ Are you query-auditing weekly, or only when things crawl?`,
                 Forge
               </span>
             </div>
-            <p className="text-[11px] text-slate-400 leading-relaxed">
+            <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
               Genuine professional thought leadership for founders, engineers, and researchers.
             </p>
           </div>
 
           {/* Product Links */}
           <div className="space-y-3">
-            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Product</h4>
-            <ul className="space-y-2 text-[11px] text-slate-400">
-              <li><Link href="/generator" className="hover:text-emerald-400 transition">Workspace Generator</Link></li>
-              <li><Link href="/dashboard" className="hover:text-emerald-400 transition">SaaS Dashboard</Link></li>
-              <li><Link href="/drafts" className="hover:text-emerald-400 transition">Draft Library</Link></li>
-              <li><Link href="/analytics" className="hover:text-emerald-400 transition">Copy Analytics</Link></li>
+            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-500">Product</h4>
+            <ul className="space-y-2 text-[11px] text-slate-500 dark:text-slate-400">
+              <li><Link href="/generator" className="hover:text-[#0A66C2] dark:hover:text-blue-400 transition">Workspace Generator</Link></li>
+              <li><Link href="/dashboard" className="hover:text-[#0A66C2] dark:hover:text-blue-400 transition">SaaS Dashboard</Link></li>
+              <li><Link href="/drafts" className="hover:text-[#0A66C2] dark:hover:text-blue-400 transition">Draft Library</Link></li>
+              <li><Link href="/analytics" className="hover:text-[#0A66C2] dark:hover:text-blue-400 transition">Copy Analytics</Link></li>
             </ul>
           </div>
 
           {/* Resources Links */}
           <div className="space-y-3">
-            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Resources</h4>
-            <ul className="space-y-2 text-[11px] text-slate-400">
-              <li><Link href="/settings/brand-profile" className="hover:text-emerald-400 transition">Brand Profile Memory</Link></li>
+            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-500">Resources</h4>
+            <ul className="space-y-2 text-[11px] text-slate-500 dark:text-slate-400">
+              <li><Link href="/settings/brand-profile" className="hover:text-[#0A66C2] dark:hover:text-blue-400 transition">Brand Profile Memory</Link></li>
               <li><span className="cursor-not-allowed opacity-60">API Reference</span></li>
               <li><span className="cursor-not-allowed opacity-60">System Status</span></li>
             </ul>
@@ -564,17 +564,17 @@ Are you query-auditing weekly, or only when things crawl?`,
 
           {/* Legal Links */}
           <div className="space-y-3">
-            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Legal</h4>
-            <ul className="space-y-2 text-[11px] text-slate-400">
-              <li><span className="hover:text-emerald-400 cursor-pointer transition">Privacy Policy</span></li>
-              <li><span className="hover:text-emerald-400 cursor-pointer transition">Terms of Service</span></li>
-              <li><span className="hover:text-emerald-400 cursor-pointer transition">Security Compliance</span></li>
+            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-500">Legal</h4>
+            <ul className="space-y-2 text-[11px] text-slate-500 dark:text-slate-400">
+              <li><span className="hover:text-[#0A66C2] dark:hover:text-blue-400 cursor-pointer transition">Privacy Policy</span></li>
+              <li><span className="hover:text-[#0A66C2] dark:hover:text-blue-400 cursor-pointer transition">Terms of Service</span></li>
+              <li><span className="hover:text-[#0A66C2] dark:hover:text-blue-400 cursor-pointer transition">Security Compliance</span></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom copyright line */}
-        <div className="pt-8 border-t border-slate-200/5 dark:border-slate-850 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-slate-500">
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-slate-500">
           <span>&copy; {new Date().getFullYear()} Forge Technologies, Inc. All rights reserved.</span>
           <span className="flex items-center gap-1.5">
             Designed for technical thought leaders.
