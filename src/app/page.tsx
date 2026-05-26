@@ -116,19 +116,19 @@ Are you query-auditing weekly, or only when things crawl?`,
   return (
     <div className="space-y-32 py-10 overflow-hidden relative">
       {/* Background glow animations */}
-      <div className="glow-blob w-[500px] h-[500px] bg-emerald-500/10 top-[-100px] right-[-100px]" />
-      <div className="glow-blob w-[600px] h-[600px] bg-teal-500/5 bottom-[200px] left-[-200px]" />
+      <div className="glow-blob w-[500px] h-[500px] bg-blue-500/10 top-[-100px] right-[-100px]" />
+      <div className="glow-blob w-[600px] h-[600px] bg-indigo-500/5 bottom-[200px] left-[-200px]" />
 
       {/* --- HERO SECTION --- */}
       <section className="relative text-center max-w-4xl mx-auto space-y-8 pt-10 md:pt-16">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/30 border border-emerald-500/20 text-emerald-400 text-xs font-semibold hover:border-emerald-500/40 transition">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/20 border border-blue-500/20 text-blue-500 text-xs font-semibold hover:border-blue-500/40 transition">
           <Sparkles className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '6s' }} />
           <span>Forge 1.0 Release Beta is Live</span>
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] md:leading-none">
           Turn Your Real Experiences Into <br />
-          <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-600 via-indigo-400 to-blue-600 bg-clip-text text-transparent">
             Authentic LinkedIn Content
           </span>
         </h1>
@@ -140,7 +140,7 @@ Are you query-auditing weekly, or only when things crawl?`,
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           <Link 
             href="/generator" 
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold text-base shadow-lg shadow-emerald-500/20 hover:scale-105 active:scale-95 transition flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-base shadow-lg shadow-blue-500/20 hover:scale-105 active:scale-95 transition flex items-center justify-center gap-2"
           >
             Start Crafting Free
             <ArrowRight className="w-5 h-5" />
@@ -157,7 +157,7 @@ Are you query-auditing weekly, or only when things crawl?`,
       {/* --- HERO INTERACTIVE MOCKUP DEMO --- */}
       <section id="demo" className="max-w-5xl mx-auto scroll-mt-24">
         <div className="glass-card rounded-3xl border border-slate-200/10 dark:border-slate-800/80 p-5 md:p-8 relative">
-          <div className="absolute -top-3 left-10 px-4 py-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-[10px] uppercase tracking-wider font-extrabold text-white">
+          <div className="absolute -top-3 left-10 px-4 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-[10px] uppercase tracking-wider font-extrabold text-white">
             Interactive Playground
           </div>
 
@@ -171,7 +171,7 @@ Are you query-auditing weekly, or only when things crawl?`,
                 <textarea
                   value={demoInput}
                   onChange={(e) => setDemoInput(e.target.value)}
-                  className="w-full h-36 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800/80 focus:border-emerald-500/50 outline-none text-sm leading-relaxed text-slate-800 dark:text-slate-300 smooth-transition resize-none"
+                  className="w-full h-36 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800/80 focus:border-blue-500/50 outline-none text-sm leading-relaxed text-slate-800 dark:text-slate-300 smooth-transition resize-none"
                   placeholder="Paste rough bullet points, git commits, or launch features here..."
                 />
               </div>
@@ -188,7 +188,7 @@ Are you query-auditing weekly, or only when things crawl?`,
                       className={`
                         py-3 px-2 rounded-xl text-xs font-bold border transition-all duration-200
                         ${demoTone === tone
-                          ? "bg-emerald-500/15 border-emerald-500 text-emerald-400 shadow-sm"
+                          ? "bg-blue-500/15 border-blue-500 text-blue-500 shadow-sm"
                           : "bg-transparent border-slate-200 dark:border-slate-800 text-slate-400 hover:border-slate-500/40 hover:text-slate-200"
                         }
                       `}
@@ -210,7 +210,7 @@ Are you query-auditing weekly, or only when things crawl?`,
               <div className="flex-1 rounded-2xl bg-white dark:bg-[#111622] border border-slate-200 dark:border-slate-800 p-5 shadow-inner flex flex-col justify-between">
                 {/* LinkedIn header */}
                 <div className="flex items-center gap-3 pb-4 border-b border-slate-100 dark:border-slate-800/40">
-                  <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center font-bold text-emerald-400 border border-emerald-500/20">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center font-bold text-blue-500 border border-blue-500/20">
                     PF
                   </div>
                   <div>
@@ -242,10 +242,10 @@ Are you query-auditing weekly, or only when things crawl?`,
 
                 {/* LinkedIn Actions panel */}
                 <div className="flex items-center justify-between border-t border-slate-100 dark:border-slate-800/40 pt-3 text-[10px] font-semibold text-slate-500 dark:text-slate-400">
-                  <button className="hover:text-emerald-400 smooth-transition">👍 Like</button>
-                  <button className="hover:text-emerald-400 smooth-transition">💬 Comment</button>
-                  <button className="hover:text-emerald-400 smooth-transition">🔁 Repost</button>
-                  <button className="hover:text-emerald-400 smooth-transition">📤 Send</button>
+                  <button className="hover:text-blue-500 smooth-transition">👍 Like</button>
+                  <button className="hover:text-blue-500 smooth-transition">💬 Comment</button>
+                  <button className="hover:text-blue-500 smooth-transition">🔁 Repost</button>
+                  <button className="hover:text-blue-500 smooth-transition">📤 Send</button>
                 </div>
               </div>
             </div>
@@ -279,12 +279,12 @@ Are you query-auditing weekly, or only when things crawl?`,
 
           {/* PostForge Output */}
           <div className={`p-6 md:p-8 rounded-3xl border ${problemComparison.forge.bg} space-y-5 relative`}>
-            <div className="absolute top-4 right-4 px-3 py-1 bg-emerald-950 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold rounded-full uppercase flex items-center gap-1.5">
+            <div className="absolute top-4 right-4 px-3 py-1 bg-blue-950 border border-blue-500/30 text-blue-500 text-[10px] font-bold rounded-full uppercase flex items-center gap-1.5">
               <CheckCircle2 className="w-3 h-3 animate-bounce" />
               {problemComparison.forge.badge}
             </div>
-            <h3 className="text-xl font-bold text-emerald-400">{problemComparison.forge.title}</h3>
-            <p className="text-xs text-slate-800 dark:text-slate-300 leading-relaxed font-sans whitespace-pre-wrap bg-slate-950/40 p-4 rounded-xl border border-emerald-500/10">
+            <h3 className="text-xl font-bold text-blue-500">{problemComparison.forge.title}</h3>
+            <p className="text-xs text-slate-800 dark:text-slate-300 leading-relaxed font-sans whitespace-pre-wrap bg-slate-950/40 p-4 rounded-xl border border-blue-500/10">
               {problemComparison.forge.content}
             </p>
           </div>
@@ -294,7 +294,7 @@ Are you query-auditing weekly, or only when things crawl?`,
       {/* --- FEATURES GRID --- */}
       <section className="max-w-6xl mx-auto space-y-16">
         <div className="text-center space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full">
             Core Utilities
           </span>
           <h2 className="text-3xl md:text-5xl font-black">
@@ -339,9 +339,9 @@ Are you query-auditing weekly, or only when things crawl?`,
             return (
               <div 
                 key={idx} 
-                className="glass-card hover:border-emerald-500/20 rounded-2xl p-6 border border-slate-200/5 hover:scale-[1.02] smooth-transition space-y-4"
+                className="glass-card hover:border-blue-500/20 rounded-2xl p-6 border border-slate-200/5 hover:scale-[1.02] smooth-transition space-y-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-white shadow-md">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white shadow-md">
                   <Icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-100">{feat.title}</h3>
@@ -377,11 +377,11 @@ Are you query-auditing weekly, or only when things crawl?`,
               step: "03",
               title: "Refined Authority",
               desc: "Review your readability analytics, choose from 3 alternate hooks, export drafts, and dominate your niche.",
-              color: "border-emerald-500/40 bg-emerald-950/5"
+              color: "border-blue-500/40 bg-blue-950/5"
             }
           ].map((item, idx) => (
             <div key={idx} className={`p-6 rounded-2xl border ${item.color} space-y-4 relative`}>
-              <div className="text-4xl font-extrabold text-emerald-500/20">{item.step}</div>
+              <div className="text-4xl font-extrabold text-blue-500/20">{item.step}</div>
               <h3 className="text-lg font-bold text-slate-100">{item.title}</h3>
               <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
             </div>
@@ -420,7 +420,7 @@ Are you query-auditing weekly, or only when things crawl?`,
             <div key={idx} className="glass-card rounded-2xl p-6 border border-slate-200/5 space-y-4 flex flex-col justify-between">
               <p className="text-xs italic text-slate-300 leading-relaxed">"{test.quote}"</p>
               <div className="flex items-center gap-3 pt-4 border-t border-slate-200/5">
-                <div className="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs font-bold">
+                <div className="w-8 h-8 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-xs font-bold">
                   {test.avatar}
                 </div>
                 <div>
@@ -461,24 +461,24 @@ Are you query-auditing weekly, or only when things crawl?`,
               href="/generator" 
               className="block w-full py-3 text-center rounded-xl bg-white/5 border border-slate-200/10 text-slate-300 text-xs font-semibold hover:bg-white/10 transition"
             >
-              Get Started
+              Get Started Free
             </Link>
           </div>
 
           {/* Pro Tier */}
-          <div className="p-8 rounded-3xl border border-emerald-500/30 bg-emerald-950/5 space-y-6 relative flex flex-col justify-between">
-            <div className="absolute top-4 right-4 bg-emerald-500 text-slate-950 text-[9px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full">
+          <div className="p-8 rounded-3xl border border-blue-500/30 bg-blue-950/5 space-y-6 relative flex flex-col justify-between">
+            <div className="absolute top-4 right-4 bg-blue-500 text-white text-[9px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full">
               Popular
             </div>
             
             <div className="space-y-2">
-              <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">Professional</span>
+              <span className="text-xs font-bold text-blue-500 uppercase tracking-wider">Professional</span>
               <h3 className="text-2xl font-bold">Forge Pro</h3>
               <p className="text-slate-400 text-xs">For founders, research heads, and full-time technical creators.</p>
               <div className="text-3xl font-extrabold pt-2">$29 <span className="text-sm font-normal text-slate-500">/ month</span></div>
             </div>
 
-            <ul className="space-y-3 text-xs text-slate-300 border-t border-emerald-500/15 pt-4">
+            <ul className="space-y-3 text-xs text-slate-300 border-t border-blue-500/15 pt-4">
               <li className="flex items-center gap-2">✔ Unlimited Custom Post Generations</li>
               <li className="flex items-center gap-2">✔ Infinite Custom Brand Profiles</li>
               <li className="flex items-center gap-2">✔ Full GitHub Repository Import</li>
@@ -488,7 +488,7 @@ Are you query-auditing weekly, or only when things crawl?`,
 
             <Link 
               href="/generator" 
-              className="block w-full py-3 text-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white text-xs font-bold shadow-lg shadow-emerald-500/20 hover:scale-[1.02] transition"
+              className="block w-full py-3 text-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs font-bold shadow-lg shadow-blue-500/20 hover:scale-[1.02] transition"
             >
               Upgrade to Pro
             </Link>
@@ -529,10 +529,10 @@ Are you query-auditing weekly, or only when things crawl?`,
           {/* Brand Info */}
           <div className="space-y-4 md:col-span-1">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center">
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-[#0A66C2] to-blue-400 flex items-center justify-center">
                 <Flame className="w-4 h-4 text-white" />
               </div>
-              <span className="text-base font-bold bg-gradient-to-r from-emerald-500 to-teal-400 bg-clip-text text-transparent">
+              <span className="text-base font-bold bg-gradient-to-r from-[#0A66C2] to-blue-500 bg-clip-text text-transparent">
                 Forge
               </span>
             </div>
