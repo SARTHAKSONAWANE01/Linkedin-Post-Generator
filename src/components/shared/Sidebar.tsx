@@ -39,10 +39,10 @@ export function Sidebar() {
       {/* Mobile top navigation header */}
       <header className="fixed top-0 left-0 right-0 h-16 border-b border-slate-200 dark:border-slate-800 bg-[#ffffff]/80 dark:bg-[#080b11]/80 backdrop-blur-md z-40 flex items-center justify-between px-6 md:hidden">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center shadow-md">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#0A66C2] to-blue-400 flex items-center justify-center shadow-md">
             <Flame className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
+          <span className="text-xl font-bold bg-gradient-to-r from-[#0A66C2] to-blue-500 bg-clip-text text-transparent">
             Forge
           </span>
         </Link>
@@ -75,11 +75,11 @@ export function Sidebar() {
         <div className="flex flex-col flex-1 p-6 overflow-y-auto">
           {/* Brand Logo */}
           <div className="flex items-center gap-2.5 pb-8 mb-4 border-b border-slate-100 dark:border-slate-800/60">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/10">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#0A66C2] to-blue-400 flex items-center justify-center shadow-lg shadow-blue-500/10">
               <Flame className="w-6 h-6 text-white animate-pulse" />
             </div>
             <div>
-              <span className="text-2xl font-black tracking-tight bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-black tracking-tight bg-gradient-to-r from-[#0A66C2] to-blue-500 bg-clip-text text-transparent">
                 Forge
               </span>
               <span className="block text-[10px] text-slate-400 dark:text-slate-500 font-semibold tracking-wider uppercase">
@@ -101,12 +101,12 @@ export function Sidebar() {
                   className={`
                     flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 group
                     ${isActive 
-                      ? "bg-emerald-50/80 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 border-l-4 border-emerald-500" 
+                      ? "bg-blue-50/80 dark:bg-blue-950/20 text-[#0A66C2] dark:text-blue-400 border-l-4 border-[#0A66C2]" 
                       : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900/50 hover:text-slate-900 dark:hover:text-slate-100"
                     }
                   `}
                 >
-                  <Icon className={`w-5 h-5 transition-transform duration-200 group-hover:scale-110 ${isActive ? "text-emerald-500" : "text-slate-400 dark:text-slate-500"}`} />
+                  <Icon className={`w-5 h-5 transition-transform duration-200 group-hover:scale-110 ${isActive ? "text-[#0A66C2]" : "text-slate-400 dark:text-slate-500"}`} />
                   {item.name}
                 </Link>
               );
