@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="antialiased min-h-screen bg-background text-foreground smooth-transition">
         <ThemeProvider>
           <div className="flex min-h-screen">
@@ -22,7 +22,7 @@ export default function RootLayout({
             <Sidebar />
             
             {/* Main content viewport */}
-            <main className="flex-1 flex flex-col min-w-0 md:pl-64">
+            <main className="flex-1 flex flex-col min-w-0 md:pl-64 pt-16 md:pt-0">
               <div className="flex-1 p-6 md:p-10 max-w-7xl w-full mx-auto relative z-10">
                 {children}
               </div>
