@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { Sidebar } from "@/components/shared/Sidebar";
 
 export const metadata: Metadata = {
-  title: "PostForge | Authentic LinkedIn Personal Branding Platform",
+  title: "Forge | Authentic LinkedIn Personal Branding Platform",
   description: "Turn your raw experiences, startup reflections, and technical engineering metrics into high-impact, human-sounding LinkedIn posts.",
 };
 

@@ -97,7 +97,7 @@ Behold the testament of our digital transformation:
 Huge congrats to our game-changing wizards! Join our journey as we revolutionize the future of databases. Let's make an impact! 📈💻`,
     },
     forge: {
-      title: "PostForge Authentic Engine",
+      title: "Forge Authentic Engine",
       badge: "Thought Leader Grade",
       bg: "border-emerald-500/30 bg-emerald-950/5",
       content: `We spent the last 4 days refactoring our database caching. 
@@ -123,7 +123,7 @@ Are you query-auditing weekly, or only when things crawl?`,
       <section className="relative text-center max-w-4xl mx-auto space-y-8 pt-10 md:pt-16">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/30 border border-emerald-500/20 text-emerald-400 text-xs font-semibold hover:border-emerald-500/40 transition">
           <Sparkles className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '6s' }} />
-          <span>PostForge 1.0 Release Beta is Live</span>
+          <span>Forge 1.0 Release Beta is Live</span>
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] md:leading-none">
@@ -355,7 +355,7 @@ Are you query-auditing weekly, or only when things crawl?`,
       {/* --- WORKFLOW VISUALIZATION --- */}
       <section className="max-w-4xl mx-auto space-y-16">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-5xl font-black">How PostForge Works</h2>
+          <h2 className="text-3xl md:text-5xl font-black">How Forge Works</h2>
           <p className="text-slate-400 text-sm md:text-base">Three steps to elevate your LinkedIn presence from standard templates to thought leadership.</p>
         </div>
 
@@ -399,7 +399,7 @@ Are you query-auditing weekly, or only when things crawl?`,
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
-              quote: "PostForge completely solved my writing block. I paste my raw markdown notes, and it writes posts that sound exactly like an expert architect. Zero buzzwords.",
+              quote: "Forge completely solved my writing block. I paste my raw markdown notes, and it writes posts that sound exactly like an expert architect. Zero buzzwords.",
               author: "Sarah Jenkins",
               role: "Principal Infrastructure Architect",
               avatar: "SJ"
@@ -473,7 +473,7 @@ Are you query-auditing weekly, or only when things crawl?`,
             
             <div className="space-y-2">
               <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">Professional</span>
-              <h3 className="text-2xl font-bold">PostForge Pro</h3>
+              <h3 className="text-2xl font-bold">Forge Pro</h3>
               <p className="text-slate-400 text-xs">For founders, research heads, and full-time technical creators.</p>
               <div className="text-3xl font-extrabold pt-2">$29 <span className="text-sm font-normal text-slate-500">/ month</span></div>
             </div>
@@ -508,7 +508,7 @@ Are you query-auditing weekly, or only when things crawl?`,
             },
             {
               q: "Can I use it without database and Clerk key setups?",
-              a: "Absolutely! We built PostForge with a premium Client-Side Mock Fallback. The workspace, dashboard, draft saving, alternate hook engines, and carousel blueprints are 100% operational right out of the box."
+              a: "Absolutely! We built Forge with a premium Client-Side Mock Fallback. The workspace, dashboard, draft saving, alternate hook engines, and carousel blueprints are 100% operational right out of the box."
             },
             {
               q: "How does the Brand Profile Memory function?",
@@ -530,7 +530,7 @@ Are you query-auditing weekly, or only when things crawl?`,
             <Flame className="w-5 h-5 text-white" />
           </div>
           <span className="text-lg font-bold bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
-            PostForge
+            Forge
           </span>
         </div>
         <p className="text-xs text-slate-500 max-w-sm mx-auto">

@@ -128,7 +128,7 @@ export default function AnalyticsPage() {
                 Readability Recommendation Engine
               </h2>
               <p className="text-slate-400 text-xs mt-1">
-                PostForge automated analytical checks on how to maximize conversions.
+                Forge automated analytical checks on how to maximize conversions.
               </p>
             </div>
 
@@ -171,7 +171,7 @@ export default function AnalyticsPage() {
         <div className="lg:col-span-5 space-y-6">
           <div className="glass-card rounded-2xl border border-slate-200/10 p-6 space-y-4">
             <h2 className="text-lg font-bold text-slate-100">LinkedIn Optimization Laws</h2>
-            <p className="text-slate-400 text-xs">A checklist of the core structure guidelines automatically enforced by PostForge.</p>
+            <p className="text-slate-400 text-xs">A checklist of the core structure guidelines automatically enforced by Forge.</p>
             
             <ul className="space-y-3.5 text-xs text-slate-300">
               <li className="flex items-start gap-2.5">

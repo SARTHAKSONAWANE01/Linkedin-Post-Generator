@@ -43,7 +43,7 @@ export function Sidebar() {
             <Flame className="w-5 h-5 text-white" />
           </div>
           <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
-            PostForge
+            Forge
           </span>
         </Link>
         
@@ -80,7 +80,7 @@ export function Sidebar() {
             </div>
             <div>
               <span className="text-2xl font-black tracking-tight bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                PostForge
+                Forge
               </span>
               <span className="block text-[10px] text-slate-400 dark:text-slate-500 font-semibold tracking-wider uppercase">
                 AUTHENTIC BRANDING

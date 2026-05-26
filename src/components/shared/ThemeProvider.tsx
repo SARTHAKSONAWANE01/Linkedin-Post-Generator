@@ -15,7 +15,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("postforge-theme") as Theme | null;
+    const savedTheme = localStorage.getItem("forge-theme") as Theme | null;
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.className = savedTheme;
@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
-    localStorage.setItem("postforge-theme", nextTheme);
+    localStorage.setItem("forge-theme", nextTheme);
     document.documentElement.className = nextTheme;
   };
 

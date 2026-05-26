@@ -90,7 +90,7 @@ Are you auditing queries weekly, or only when things start crawling?`;
   } else if (tone === "Founder") {
     postContent = `Building a startup is a series of hard choices. Yesterday was one of those days.
 
-We had to make a call on PostForge: keep polishing our custom analytical hook algorithms, or launch the public beta immediately with the core text generator.
+We had to make a call on Forge: keep polishing our custom analytical hook algorithms, or launch the public beta immediately with the core text generator.
 
 As a founder, the urge to build "just one more feature" is a dangerous trap. It's safe. It's comfortable. It shields you from real user feedback.
 

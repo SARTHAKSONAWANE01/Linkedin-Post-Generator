@@ -1,8 +1,8 @@
-# 🚀 PostForge
+# 🚀 Forge
 
-PostForge is a premium, modern AI-powered LinkedIn Personal Branding and Post Generation platform built specifically for deep technical minds: **engineers, founders, researchers, creators, consultants, and student leaders**.
+Forge is a premium, modern AI-powered LinkedIn Personal Branding and Post Generation platform built specifically for deep technical minds: **engineers, founders, researchers, creators, consultants, and student leaders**.
 
-Unlike typical marketing copiers, PostForge eliminates the generic robotic AI tone ("AI slop") and focuses on:
+Unlike typical marketing copiers, Forge eliminates the generic robotic AI tone ("AI slop") and focuses on:
 - 💡 **Authentic Professional Storytelling:** Sharing real behind-the-scenes engineering and architectural challenges.
 - 🏗️ **Technical Thought Leadership:** Metric-driven posts showcasing databases, scaling, latency drop counts, or components trade-offs.
 - ✍️ **Human-Like Writing:** Flow variation, natural conversational hooks, and conciseSkim structures tailored for LinkedIn reading comfort.
@@ -57,9 +57,9 @@ Unlike typical marketing copiers, PostForge eliminates the generic robotic AI to
    Create a `.env` file in the root directory:
    ```env
    OPENAI_API_KEY=your-api-key-here
-   DATABASE_URL=postgresql://user:password@localhost:5432/postforge
+   DATABASE_URL=postgresql://user:password@localhost:5432/forge
    ```
-   *Note: If no keys are specified, PostForge automatically defaults to its advanced local keyword fallback mode so you can interact with all generator features instantly.*
+   *Note: If no keys are specified, Forge automatically defaults to its advanced local keyword fallback mode so you can interact with all generator features instantly.*
 
 3. **Run development server:**
    ```bash
@@ -76,6 +76,6 @@ Unlike typical marketing copiers, PostForge eliminates the generic robotic AI to
 
 ## 🛡️ Anti-AI-Tone Compliance Law
 
-PostForge automatically parses all generated content to explicitly eliminate banished marketing keywords:
+Forge automatically parses all generated content to explicitly eliminate banished marketing keywords:
 - ❌ *Banished Terms:* `delve`, `tapestry`, `revolutionize`, `elevate`, `synergy`, `in today's digital age`, `humbled & thrilled`.
 - ✔ *Enforced Rules:* Starts *in media res* (with active metrics or codebase conflicts), double margins whitespace skimming, no accessibility-breaking unicode bolding.

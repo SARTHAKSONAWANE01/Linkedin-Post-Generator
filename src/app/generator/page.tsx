@@ -387,7 +387,7 @@ export default function GeneratorPage() {
               {analytics && (
                 <div className="glass-card rounded-2xl border border-slate-200/10 p-5 space-y-4">
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest block">
-                    PostForge Copy Analytics
+                    Forge Copy Analytics
                   </label>
                   
                   <div className="grid grid-cols-3 gap-3 text-center">
