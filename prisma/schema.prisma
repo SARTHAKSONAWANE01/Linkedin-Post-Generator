@@ -1,0 +1,91 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  clerkUserId   String         @unique
+  name          String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  brandProfiles BrandProfile[]
+  drafts        Draft[]
+  generations   Generation[]
+}
+
+model BrandProfile {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name         String
+  role         String
+  tone         String   @default("Engineering")
+  styleNotes   String   @default("")
+  expertise    String[] @default([])
+  achievements String[] @default([])
+  examples     String[] @default([])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model Draft {
+  id              String           @id @default(cuid())
+  userId          String
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title           String
+  content         String
+  rawInput        String           @default("")
+  category        String           @default("Technical")
+  tone            String           @default("Engineering")
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  analytics       DraftAnalytics?
+  carouselOutline CarouselSlide[]
+
+  @@index([userId])
+}
+
+model DraftAnalytics {
+  id                  String   @id @default(cuid())
+  draftId             String   @unique
+  draft               Draft    @relation(fields: [draftId], references: [id], onDelete: Cascade)
+  readabilityScore    Int      @default(80)
+  hookStrength        Int      @default(80)
+  ctaEffectiveness    Int      @default(75)
+  predictedEngagement String   @default("Medium")
+  feedbackSuggestions String[] @default([])
+}
+
+model CarouselSlide {
+  id              String   @id @default(cuid())
+  draftId         String
+  draft           Draft    @relation(fields: [draftId], references: [id], onDelete: Cascade)
+  slideNumber     Int
+  title           String
+  content         String
+  visualDirection String   @default("")
+
+  @@index([draftId])
+}
+
+model Generation {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  promptUsed  String
+  postContent String
+  category    String
+  tone        String
+  tokensUsed  Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@index([userId])
+}
