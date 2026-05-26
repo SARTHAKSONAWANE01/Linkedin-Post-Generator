@@ -50,6 +50,49 @@ export default function GeneratorPage() {
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [activeCarouselSlide, setActiveCarouselSlide] = useState(0);
 
+  const standardCategories = ["Technical", "Startup", "Career", "Launch", "Research", "Community"];
+  const standardTones = ["Engineering", "Founder", "Thought Leader", "Concise", "Storyteller"];
+
+  const [isCustomCategory, setIsCustomCategory] = useState(!standardCategories.includes(selectedCategory));
+  const [customCategoryInput, setCustomCategoryInput] = useState(
+    standardCategories.includes(selectedCategory) ? "" : selectedCategory
+  );
+
+  const [isCustomTone, setIsCustomTone] = useState(!standardTones.includes(selectedTone));
+  const [customToneInput, setCustomToneInput] = useState(
+    standardTones.includes(selectedTone) ? "" : selectedTone
+  );
+
+  const handleSelectCategory = (cat: string) => {
+    setIsCustomCategory(false);
+    setCategory(cat);
+  };
+
+  const handleSelectCustomCategory = () => {
+    setIsCustomCategory(true);
+    setCategory(customCategoryInput || "Custom");
+  };
+
+  const handleCustomCategoryInputChange = (val: string) => {
+    setCustomCategoryInput(val);
+    setCategory(val || "Custom");
+  };
+
+  const handleSelectTone = (t: string) => {
+    setIsCustomTone(false);
+    setTone(t);
+  };
+
+  const handleSelectCustomTone = () => {
+    setIsCustomTone(true);
+    setTone(customToneInput || "Custom Tone");
+  };
+
+  const handleCustomToneInputChange = (val: string) => {
+    setCustomToneInput(val);
+    setTone(val || "Custom Tone");
+  };
+
   const handleGenerate = async () => {
     if (!rawInput.trim() && !gitRepoUrl && !researchPaperSummary) return;
 
@@ -132,29 +175,50 @@ export default function GeneratorPage() {
                 1. Select Category Mode
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {([
-                  "Technical", 
-                  "Startup", 
-                  "Career", 
-                  "Launch", 
-                  "Research", 
-                  "Community"
-                ] as const).map((cat) => (
+                {standardCategories.map((cat) => (
                   <button
                     key={cat}
-                    onClick={() => setCategory(cat)}
+                    onClick={() => handleSelectCategory(cat)}
                     className={`
                       py-2.5 px-2 rounded-xl text-xs font-semibold border transition-all duration-150
-                      ${selectedCategory === cat
-                        ? "bg-blue-500/10 border-blue-500 text-blue-600 dark:text-blue-400 font-bold"
-                        : "bg-transparent border-slate-200 dark:border-slate-800 text-slate-550 dark:text-slate-400 hover:border-[#0A66C2]/45 hover:text-slate-900 dark:hover:text-slate-200"
+                      ${!isCustomCategory && selectedCategory === cat
+                        ? "bg-blue-500/10 border-blue-500 text-blue-600 dark:text-blue-400 font-bold animate-pulse"
+                        : "bg-transparent border-slate-200 dark:border-slate-800 text-slate-550 dark:text-slate-400 hover:border-[#0A66C2]/45 hover:text-slate-900 dark:hover:text-slate-200 hover-lift"
                       }
                     `}
                   >
                     {cat}
                   </button>
                 ))}
+                <button
+                  onClick={handleSelectCustomCategory}
+                  className={`
+                    py-2.5 px-2 rounded-xl text-xs font-semibold border transition-all duration-150
+                    ${isCustomCategory
+                      ? "bg-blue-500/10 border-blue-500 text-blue-600 dark:text-blue-400 font-bold animate-pulse"
+                      : "bg-transparent border-slate-200 dark:border-slate-800 text-slate-550 dark:text-slate-400 hover:border-[#0A66C2]/45 hover:text-slate-900 dark:hover:text-slate-200 hover-lift"
+                    }
+                  `}
+                >
+                  + Custom
+                </button>
               </div>
+
+              {/* Custom Category Input Box */}
+              {isCustomCategory && (
+                <div className="space-y-2 mt-2 duration-300 transition-all ease-in-out origin-top transform scale-y-100">
+                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">
+                    Define Custom Category
+                  </label>
+                  <input
+                    type="text"
+                    value={customCategoryInput}
+                    onChange={(e) => handleCustomCategoryInputChange(e.target.value)}
+                    className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-205 dark:border-slate-800 text-xs outline-none focus:border-[#0A66C2]/50 smooth-transition text-slate-900 dark:text-slate-100 placeholder-slate-400"
+                    placeholder="e.g. Developer Advocacy, Product Management, Deep Tech..."
+                  />
+                </div>
+              )}
             </div>
 
             {/* Step 2: Tone Archetype */}
@@ -163,28 +227,50 @@ export default function GeneratorPage() {
                 2. Select Voice Archetype
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {([
-                  "Engineering", 
-                  "Founder", 
-                  "Thought Leader", 
-                  "Concise", 
-                  "Storyteller"
-                ] as const).map((tone) => (
+                {standardTones.map((tone) => (
                   <button
                     key={tone}
-                    onClick={() => setTone(tone)}
+                    onClick={() => handleSelectTone(tone)}
                     className={`
                       py-2.5 px-2 rounded-xl text-xs font-semibold border transition-all duration-150
-                      ${selectedTone === tone
-                        ? "bg-blue-500/10 border-blue-500 text-blue-600 dark:text-blue-400 font-bold"
-                        : "bg-transparent border-slate-200 dark:border-slate-800 text-slate-550 dark:text-slate-400 hover:border-[#0A66C2]/45 hover:text-slate-900 dark:hover:text-slate-200"
+                      ${!isCustomTone && selectedTone === tone
+                        ? "bg-blue-500/10 border-blue-500 text-blue-600 dark:text-blue-400 font-bold animate-pulse"
+                        : "bg-transparent border-slate-200 dark:border-slate-800 text-slate-550 dark:text-slate-400 hover:border-[#0A66C2]/45 hover:text-slate-900 dark:hover:text-slate-200 hover-lift"
                       }
                     `}
                   >
                     {tone}
                   </button>
                 ))}
+                <button
+                  onClick={handleSelectCustomTone}
+                  className={`
+                    py-2.5 px-2 rounded-xl text-xs font-semibold border transition-all duration-150
+                    ${isCustomTone
+                      ? "bg-blue-500/10 border-blue-500 text-blue-600 dark:text-blue-400 font-bold animate-pulse"
+                      : "bg-transparent border-slate-200 dark:border-slate-800 text-slate-550 dark:text-slate-400 hover:border-[#0A66C2]/45 hover:text-slate-900 dark:hover:text-slate-200 hover-lift"
+                    }
+                  `}
+                >
+                  + Custom
+                </button>
               </div>
+
+              {/* Custom Tone Input Box */}
+              {isCustomTone && (
+                <div className="space-y-2 mt-2 duration-300 transition-all ease-in-out origin-top transform scale-y-100">
+                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">
+                    Define Custom Voice Archetype
+                  </label>
+                  <input
+                    type="text"
+                    value={customToneInput}
+                    onChange={(e) => handleCustomToneInputChange(e.target.value)}
+                    className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-205 dark:border-slate-800 text-xs outline-none focus:border-[#0A66C2]/50 smooth-transition text-slate-900 dark:text-slate-100 placeholder-slate-400"
+                    placeholder="e.g. Sarcastic & Witty, Inspiring Storyteller, Technical Rant..."
+                  />
+                </div>
+              )}
             </div>
 
             {/* Step 3: Dynamic Integration Fields */}

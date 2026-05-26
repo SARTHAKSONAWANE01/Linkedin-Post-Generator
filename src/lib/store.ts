@@ -30,8 +30,8 @@ export interface Draft {
   title: string;
   content: string;
   rawInput: string;
-  category: "Technical" | "Startup" | "Career" | "Launch" | "Research" | "Community";
-  tone: "Founder" | "Engineering" | "Thought Leader" | "Concise" | "Storyteller";
+  category: string;
+  tone: string;
   createdAt: string;
   analytics?: PostAnalytics;
   carouselOutline?: CarouselSlide[];
@@ -45,8 +45,8 @@ interface GeneratorState {
 
   // Active workspace state
   rawInput: string;
-  selectedCategory: Draft["category"];
-  selectedTone: Draft["tone"];
+  selectedCategory: string;
+  selectedTone: string;
   gitRepoUrl: string;
   researchPaperSummary: string;
   isGenerating: boolean;
@@ -63,8 +63,8 @@ interface GeneratorState {
   
   // Workspace Actions
   setRawInput: (input: string) => void;
-  setCategory: (category: Draft["category"]) => void;
-  setTone: (tone: Draft["tone"]) => void;
+  setCategory: (category: string) => void;
+  setTone: (tone: string) => void;
   setGitRepoUrl: (url: string) => void;
   setResearchSummary: (summary: string) => void;
   setGenerating: (isGenerating: boolean) => void;

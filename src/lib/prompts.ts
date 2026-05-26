@@ -63,12 +63,20 @@ FORMATTING & POST-PROCESSING:
 export function assembleGenerationPrompt(params: {
   rawInput: string;
   brandProfile: BrandProfile;
-  tone: keyof typeof TONE_ARCHETYPES;
+  tone: string;
   category: string;
   gitRepoUrl?: string;
   researchPaperSummary?: string;
 }) {
   const { rawInput, brandProfile, tone, category, gitRepoUrl, researchPaperSummary } = params;
+
+  const toneConstraint = TONE_ARCHETYPES[tone as keyof typeof TONE_ARCHETYPES] || `
+Tone: ${tone}
+Style Guidelines:
+- Adopt the personality, pacing, and vocabulary associated with the user's custom style direction: "${tone}".
+- Inject authentic, professional vocabulary tailored to this voice.
+- Avoid generic corporate tropes and overly artificial enthusiasm.
+`;
 
   return `
 You are the professional writing co-pilot for ${brandProfile.name}, a ${brandProfile.role}.
@@ -93,7 +101,7 @@ ${researchPaperSummary ? `- Source Research Details / PDF notes:\n"""\n${researc
 
 ---
 STYLE & TONE CONSTRAINTS:
-${TONE_ARCHETYPES[tone]}
+${toneConstraint}
 
 ---
 ANTI-AI TONE LAWS:

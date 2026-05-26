@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased min-h-screen bg-background text-foreground smooth-transition">
+      <body className="antialiased min-h-screen bg-background text-foreground bg-dot-pattern smooth-transition">
         <ThemeProvider>
           <div className="flex min-h-screen">
             {/* Sidebar navigation */}

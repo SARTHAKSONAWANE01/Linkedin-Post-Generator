@@ -13,8 +13,8 @@ export interface GenerationResponse {
 function generateMockResponse(
   rawInput: string,
   brandProfile: BrandProfile,
-  tone: "Founder" | "Engineering" | "Thought Leader" | "Concise" | "Storyteller",
-  category: "Technical" | "Startup" | "Career" | "Launch" | "Research" | "Community",
+  tone: string,
+  category: string,
   gitUrl?: string,
   researchSummary?: string
 ): GenerationResponse {
@@ -38,7 +38,51 @@ function generateMockResponse(
   else if (isScale) techTopic = "minimizing API query latencies";
   else if (isStartup) techTopic = "launching our core SaaS workflow";
 
-  if (tone === "Engineering") {
+  const standardTones = ["Founder", "Engineering", "Thought Leader", "Concise", "Storyteller"];
+  const standardCategories = ["Technical", "Startup", "Career", "Launch", "Research", "Community"];
+  
+  if (!standardTones.includes(tone) || !standardCategories.includes(category)) {
+    postContent = `For a long time, we've wanted to tackle how we approach ${category}. 
+
+Yesterday, we decided to build a custom solution from scratch. We threw out standard templates and focused strictly on raw, high-impact results.
+
+Here is the exact framework we used:
+1. Identified the root bottleneck: ${inputTopic.toLowerCase()}.
+2. Rejected the standard industry standard answers.
+3. Crafted a lightweight, tailored system built for pure utility.
+
+The core lesson?
+When you write and build in a "${tone}" voice, authenticity becomes your primary competitive advantage. You don't need complex, heavy layers. You just need to share real execution.
+
+Are you building custom layers for your workflow, or relying on generic templates?`;
+
+    alternateHooks = [
+      `Why standard templates fail when building a real strategy for ${category}.`,
+      `How to design a high-performance system for ${inputTopic.toLowerCase()} from scratch.`,
+      `Stop using generic templates. Here is our direct approach to ${category}.`
+    ];
+
+    carouselOutline = [
+      {
+        slideNumber: 1,
+        title: `The Custom ${category} Blueprint`,
+        content: `How we threw out standard industry templates to build a high-performance framework.`,
+        visualDirection: "Sleek dark layout with vibrant branding highlights."
+      },
+      {
+        slideNumber: 2,
+        title: "The Architecture Rules",
+        content: `1. Strip the fluff. 2. Focus on ${inputTopic.toLowerCase()}. 3. Ship and iterate in public.`,
+        visualDirection: "Clean numbered cards centered over high-contrast grid."
+      },
+      {
+        slideNumber: 3,
+        title: "Actionable Wins",
+        content: `Stop worrying about perfection. Authentic, high-fidelity execution wins every single time.`,
+        visualDirection: "Vibrant callout block with bold custom styling."
+      }
+    ];
+  } else if (tone === "Engineering") {
     postContent = `We spent the last 4 days refactoring ${techTopic}. 
 
 Here is the exact technical breakdown of why we did it, and the concrete metrics we achieved:
@@ -257,8 +301,8 @@ Are you sharing your raw journey, or keeping it polished?`;
 export async function generateLinkedInPost(params: {
   rawInput: string;
   brandProfile: BrandProfile;
-  tone: "Founder" | "Engineering" | "Thought Leader" | "Concise" | "Storyteller";
-  category: "Technical" | "Startup" | "Career" | "Launch" | "Research" | "Community";
+  tone: string;
+  category: string;
   gitRepoUrl?: string;
   researchPaperSummary?: string;
 }): Promise<GenerationResponse> {
