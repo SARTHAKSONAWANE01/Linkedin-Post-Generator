@@ -71,15 +71,15 @@ export default function BrandProfilePage() {
 
   return (
     <div className="space-y-8 relative">
-      <div className="glow-blob w-[400px] h-[400px] bg-emerald-500/5 top-[-100px] right-[-50px]" />
+      <div className="glow-blob w-[400px] h-[400px] bg-[#0A66C2]/5 top-[-100px] right-[-50px]" />
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-850 pb-5">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
-          <h1 className="text-xl font-bold bg-gradient-to-r from-slate-800 to-slate-650 dark:from-slate-100 dark:to-slate-350 bg-clip-text text-transparent">
+          <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">
             Brand Profile Memory
           </h1>
-          <p className="text-slate-400 text-[11px] mt-0.5">
+          <p className="text-slate-500 dark:text-slate-400 text-[11px] mt-0.5">
             Build your personal AI writing context. The generator references this profile to craft matching tone scripts.
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function BrandProfilePage() {
         <button
           onClick={handleSave}
           disabled={isSaving}
-          className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-extrabold text-xs shadow-md hover:scale-[1.02] active:scale-95 smooth-transition disabled:opacity-50 flex items-center justify-center gap-2"
+          className="px-6 py-3 rounded-xl bg-[#0A66C2] hover:bg-[#004182] text-white font-extrabold text-xs shadow-md hover:scale-[1.02] active:scale-95 smooth-transition disabled:opacity-50 flex items-center justify-center gap-2"
         >
           {isSaving ? (
             <>
@@ -96,7 +96,7 @@ export default function BrandProfilePage() {
             </>
           ) : saveCompleted ? (
             <>
-              <Check className="w-4 h-4 text-emerald-300" />
+              <Check className="w-4 h-4 text-white" />
               Memory Saved!
             </>
           ) : (
@@ -112,9 +112,9 @@ export default function BrandProfilePage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Side: General Profile Setup (7 cols) */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="glass-card rounded-2xl border border-slate-200/10 p-6 space-y-5">
-            <h2 className="text-lg font-bold text-slate-100 flex items-center gap-2">
-              <SlidersHorizontal className="w-5 h-5 text-emerald-500" />
+          <div className="glass-card rounded-2xl p-6 space-y-5">
+            <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+              <SlidersHorizontal className="w-5 h-5 text-[#0A66C2]" />
               Core Identity
             </h2>
 
@@ -128,7 +128,7 @@ export default function BrandProfilePage() {
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs outline-none focus:border-emerald-500/50 text-slate-200 smooth-transition"
+                  className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-205 dark:border-slate-800 text-xs outline-none focus:border-[#0A66C2]/50 text-slate-900 dark:text-slate-100 smooth-transition placeholder-slate-400"
                   placeholder="e.g. Alex Dev"
                 />
               </div>
@@ -141,7 +141,7 @@ export default function BrandProfilePage() {
                 <select
                   value={tone}
                   onChange={(e) => setTone(e.target.value)}
-                  className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs outline-none focus:border-emerald-500/50 text-slate-400 dark:text-slate-300 smooth-transition"
+                  className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-205 dark:border-slate-800 text-xs outline-none focus:border-[#0A66C2]/50 text-slate-800 dark:text-slate-300 smooth-transition"
                 >
                   <option value="Engineering">Engineering Mode</option>
                   <option value="Founder">Founder Mode</option>
@@ -161,7 +161,7 @@ export default function BrandProfilePage() {
                 type="text"
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
-                className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs outline-none focus:border-emerald-500/50 text-slate-200 smooth-transition"
+                className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-205 dark:border-slate-800 text-xs outline-none focus:border-[#0A66C2]/50 text-slate-900 dark:text-slate-100 smooth-transition placeholder-slate-400"
                 placeholder="e.g. Lead Software Architect & Tech Founder"
               />
             </div>
@@ -174,7 +174,7 @@ export default function BrandProfilePage() {
               <textarea
                 value={styleNotes}
                 onChange={(e) => setStyleNotes(e.target.value)}
-                className="w-full h-32 p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 outline-none focus:border-emerald-500/50 text-xs leading-relaxed text-slate-350 dark:text-slate-300 resize-none smooth-transition"
+                className="w-full h-32 p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-205 dark:border-slate-800 outline-none focus:border-[#0A66C2]/50 text-xs leading-relaxed text-slate-800 dark:text-slate-300 resize-none smooth-transition placeholder-slate-400"
                 placeholder="Instruct the AI: e.g. Prefer short punchy bullets, avoid corporate adjectives, use plain developers wording..."
               />
             </div>
@@ -184,9 +184,9 @@ export default function BrandProfilePage() {
         {/* Right Side: Tags and Achievements (5 cols) */}
         <div className="lg:col-span-5 space-y-6">
           {/* Expertise tag builder */}
-          <div className="glass-card rounded-2xl border border-slate-200/10 p-6 space-y-4">
-            <h2 className="text-base font-bold text-slate-100">Expertise Areas</h2>
-            <p className="text-slate-400 text-[10px] leading-relaxed">
+          <div className="glass-card rounded-2xl p-6 space-y-4">
+            <h2 className="text-base font-bold text-slate-900 dark:text-slate-100">Expertise Areas</h2>
+            <p className="text-slate-500 dark:text-slate-400 text-[10px] leading-relaxed">
               Add technical domains or business topics you speak about. The generator relies on these contexts.
             </p>
 
@@ -197,12 +197,12 @@ export default function BrandProfilePage() {
                 value={newExpertise}
                 onChange={(e) => setNewExpertise(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleAddExpertise()}
-                className="flex-1 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs outline-none focus:border-emerald-500/50 text-slate-200"
+                className="flex-1 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-205 dark:border-slate-800 text-xs outline-none focus:border-[#0A66C2]/50 text-slate-900 dark:text-slate-100 placeholder-slate-400"
                 placeholder="e.g. Redis Caching"
               />
               <button
                 onClick={handleAddExpertise}
-                className="p-2.5 rounded-xl bg-slate-150 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-200 dark:border-slate-800 smooth-transition"
+                className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-[#0A66C2] dark:hover:text-blue-450 border border-slate-205 dark:border-slate-800 smooth-transition"
               >
                 <Plus className="w-4 h-4" />
               </button>
@@ -213,12 +213,12 @@ export default function BrandProfilePage() {
               {expertise.map((tag) => (
                 <span 
                   key={tag}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/15 text-[10px] font-bold"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/15 text-[10px] font-bold"
                 >
                   {tag}
                   <button 
                     onClick={() => handleRemoveExpertise(tag)}
-                    className="hover:text-red-400 text-slate-500 font-bold ml-1 transition"
+                    className="hover:text-red-500 text-slate-500 font-bold ml-1 transition"
                   >
                     ×
                   </button>
@@ -228,9 +228,9 @@ export default function BrandProfilePage() {
           </div>
 
           {/* Key Achievements Bullet list builder */}
-          <div className="glass-card rounded-2xl border border-slate-200/10 p-6 space-y-4">
-            <h2 className="text-base font-bold text-slate-100">Key Achievements</h2>
-            <p className="text-slate-400 text-[10px] leading-relaxed">
+          <div className="glass-card rounded-2xl p-6 space-y-4">
+            <h2 className="text-base font-bold text-slate-900 dark:text-slate-100">Key Achievements</h2>
+            <p className="text-slate-500 dark:text-slate-400 text-[10px] leading-relaxed">
               Log metrics-driven outcomes (e.g. Scaling numbers, funding rounds, revenue wins) that can be seamlessly injected.
             </p>
 
@@ -241,12 +241,12 @@ export default function BrandProfilePage() {
                 value={newAchievement}
                 onChange={(e) => setNewAchievement(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleAddAchievement()}
-                className="flex-1 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs outline-none focus:border-emerald-500/50 text-slate-200"
+                className="flex-1 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-205 dark:border-slate-800 text-xs outline-none focus:border-[#0A66C2]/50 text-slate-900 dark:text-slate-100 placeholder-slate-400"
                 placeholder="e.g. Slashing API queries cost by 40%"
               />
               <button
                 onClick={handleAddAchievement}
-                className="p-2.5 rounded-xl bg-slate-150 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-200 dark:border-slate-800 smooth-transition"
+                className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-[#0A66C2] dark:hover:text-blue-450 border border-slate-205 dark:border-slate-800 smooth-transition"
               >
                 <Plus className="w-4 h-4" />
               </button>
@@ -258,12 +258,12 @@ export default function BrandProfilePage() {
                 {achievements.map((ach) => (
                   <div 
                     key={ach}
-                    className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-slate-50/40 dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800 text-[11px] text-slate-350 dark:text-slate-300 leading-relaxed"
+                    className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-slate-50/40 dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800 text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed"
                   >
                     <span>{ach}</span>
                     <button
                       onClick={() => handleRemoveAchievement(ach)}
-                      className="text-slate-500 hover:text-red-400 transition"
+                      className="text-slate-500 hover:text-red-500 dark:hover:text-red-400 transition"
                       title="Delete Achievement"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
