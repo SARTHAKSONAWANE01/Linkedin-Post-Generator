@@ -34,12 +34,12 @@ export default function AnalyticsPage() {
       <div className="glow-blob w-[400px] h-[400px] bg-emerald-500/5 top-[-100px] right-[-50px]" />
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800/80 pb-6">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-850 pb-5">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-slate-100 to-slate-400 bg-clip-text text-transparent flex items-center gap-2">
+          <h1 className="text-xl font-bold bg-gradient-to-r from-slate-800 to-slate-650 dark:from-slate-100 dark:to-slate-350 bg-clip-text text-transparent">
             Post Analytics
           </h1>
-          <p className="text-slate-400 text-xs md:text-sm mt-1">
+          <p className="text-slate-400 text-[11px] mt-0.5">
             Real-time readability index, hook strengths, and predicted engagement stats for saved copies.
           </p>
         </div>

@@ -523,21 +523,62 @@ Are you query-auditing weekly, or only when things crawl?`,
         </div>
       </section>
 
-      {/* --- FOOTER CTA --- */}
-      <footer className="text-center space-y-6 pt-10 border-t border-slate-200/5">
-        <div className="flex items-center justify-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center">
-            <Flame className="w-5 h-5 text-white" />
+      {/* --- CORPORATE FOOTER --- */}
+      <footer className="pt-16 pb-8 border-t border-slate-200 dark:border-slate-850 space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+          {/* Brand Info */}
+          <div className="space-y-4 md:col-span-1">
+            <div className="flex items-center gap-2">
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center">
+                <Flame className="w-4 h-4 text-white" />
+              </div>
+              <span className="text-base font-bold bg-gradient-to-r from-emerald-500 to-teal-400 bg-clip-text text-transparent">
+                Forge
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-400 leading-relaxed">
+              Genuine professional thought leadership for founders, engineers, and researchers.
+            </p>
           </div>
-          <span className="text-lg font-bold bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
-            Forge
-          </span>
+
+          {/* Product Links */}
+          <div className="space-y-3">
+            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Product</h4>
+            <ul className="space-y-2 text-[11px] text-slate-400">
+              <li><Link href="/generator" className="hover:text-emerald-400 transition">Workspace Generator</Link></li>
+              <li><Link href="/dashboard" className="hover:text-emerald-400 transition">SaaS Dashboard</Link></li>
+              <li><Link href="/drafts" className="hover:text-emerald-400 transition">Draft Library</Link></li>
+              <li><Link href="/analytics" className="hover:text-emerald-400 transition">Copy Analytics</Link></li>
+            </ul>
+          </div>
+
+          {/* Resources Links */}
+          <div className="space-y-3">
+            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Resources</h4>
+            <ul className="space-y-2 text-[11px] text-slate-400">
+              <li><Link href="/settings/brand-profile" className="hover:text-emerald-400 transition">Brand Profile Memory</Link></li>
+              <li><span className="cursor-not-allowed opacity-60">API Reference</span></li>
+              <li><span className="cursor-not-allowed opacity-60">System Status</span></li>
+            </ul>
+          </div>
+
+          {/* Legal Links */}
+          <div className="space-y-3">
+            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Legal</h4>
+            <ul className="space-y-2 text-[11px] text-slate-400">
+              <li><span className="hover:text-emerald-400 cursor-pointer transition">Privacy Policy</span></li>
+              <li><span className="hover:text-emerald-400 cursor-pointer transition">Terms of Service</span></li>
+              <li><span className="hover:text-emerald-400 cursor-pointer transition">Security Compliance</span></li>
+            </ul>
+          </div>
         </div>
-        <p className="text-xs text-slate-500 max-w-sm mx-auto">
-          Crafting genuine professional thought leadership for modern creators. Built with Next.js 15, React 19, and Tailwind.
-        </p>
-        <div className="text-[10px] text-slate-600 flex items-center justify-center gap-1">
-          Made with <Heart className="w-3 h-3 text-red-500 fill-red-500" /> by Antigravity AI
+
+        {/* Bottom copyright line */}
+        <div className="pt-8 border-t border-slate-200/5 dark:border-slate-850 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-slate-500">
+          <span>&copy; {new Date().getFullYear()} Forge Technologies, Inc. All rights reserved.</span>
+          <span className="flex items-center gap-1.5">
+            Designed for technical thought leaders.
+          </span>
         </div>
       </footer>
     </div>

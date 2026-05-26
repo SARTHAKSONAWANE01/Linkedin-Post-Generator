@@ -69,12 +69,12 @@ export default function DashboardPage() {
       <div className="glow-blob w-[500px] h-[500px] bg-emerald-500/5 top-[-100px] right-[-100px]" />
 
       {/* Greeting Banner */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800/80 pb-6">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-850 pb-5">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-slate-100 to-slate-400 bg-clip-text text-transparent">
+          <h1 className="text-xl font-bold bg-gradient-to-r from-slate-800 to-slate-650 dark:from-slate-100 dark:to-slate-350 bg-clip-text text-transparent">
             Welcome back, {brandProfile.name.split(" ")[0]}
           </h1>
-          <p className="text-slate-400 text-xs md:text-sm mt-1">
+          <p className="text-slate-400 text-[11px] mt-0.5">
             Your Personal Brand Memory is loaded with <span className="text-emerald-400 font-semibold">{brandProfile.expertise.length} core sectors</span>.
           </p>
         </div>

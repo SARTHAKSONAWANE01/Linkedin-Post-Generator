@@ -14,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
-      <body className="antialiased min-h-screen bg-[#080b11] text-[#f8fafc]">
+    <html lang="en">
+      <body className="antialiased min-h-screen bg-background text-foreground smooth-transition">
         <ThemeProvider>
           <div className="flex min-h-screen">
             {/* Sidebar navigation */}
